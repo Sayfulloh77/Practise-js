@@ -22,7 +22,7 @@ const products = [
     price:20000000,
     company:"Apple",
     getMonthly: 3000000,
-    PaymentMonthly:true,
+    PaymentMonthly:false,
     productsImages: "https://picsum.photos/id/17/300/500",
     quantity:10,
     category:"Smartfonlar",
@@ -146,12 +146,14 @@ const getDate =()=> {
          if(products.quantity !== 0) {
                      wrapperCard.appendChild(div)
          }
-         const monthly = div.querySelector(".monthly")
+         //const monthly = div.querySelector(".monthly")
+         const monthlyNumber = div.querySelector(".card-date")
          /*if (products.PaymentMonthly !== true) {
                 monthly.textContent = "oyiga tolov yoq"
          }*/
         if (!products.PaymentMonthly) {
-           monthly.textContent = "oyiga to‘lov yo‘q";
+           //monthly.textContent = "oyiga to‘lov yo‘q";
+           monthlyNumber.textContent = "Bo'lib to'lash yo'q";
           }
         
 
