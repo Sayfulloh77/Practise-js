@@ -131,7 +131,7 @@ const getDate =()=> {
                     </p>
                     <span class="card-date rounded-pill">
                         ${products.getMonthly} <span class="monthly">somdan / oyiga</span>
-                    </span>
+                    </span> 
                     <h4>${products.isname}</h4>
                     <p class="card-description">
                         ${products.description}
@@ -155,8 +155,11 @@ const getDate =()=> {
            //monthly.textContent = "oyiga to‘lov yo‘q";
            monthlyNumber.textContent = "Bo'lib to'lash yo'q";
           }
-        
-
+        // There are easy way as well i mean if we want to put Bo'lib to'lash yoq, easy way is
+         products.PaymentMonthly ?products.getMonthly+ "so'mdan/oyiga" : "Bo'lib to'lash yo'q" 
+         //we used in this case ternary or some times called conditional operator 
+         //so in our case ? means if true, thats mean if inside of products paymentMonthly is true show proudcts.getMonthly + "somdan/oyiga"
+         // : means if opposite i mean  if else show Bo'lib to'lash yoq
           
             
 
