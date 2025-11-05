@@ -85,38 +85,97 @@ const products = [
     description:"Smartfon Xiomi Redmi Note"
 
     },
+      {
+    isname:"Samsung A73",
+    color:"silver",
+    price:3121000,
+    company:"Samsung",
+    getMonthly:323000,
+    PaymentMonthly:true,
+    quantity:40,
+    productsImages: "https://picsum.photos/id/16/300/500",
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+    },
+    
+    {
+    isname:"Iphone 16 pro",
+    color:"blue",
+    price:20000000,
+    company:"Apple",
+    getMonthly: 3000000,
+    PaymentMonthly:false,
+    productsImages: "https://picsum.photos/id/17/300/500",
+    quantity:10,
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+
+    },
+
+    {
+    isname:"Redmi note 11 pro max",
+    color:"silver",
+    price:3321000,
+    company:"Xiomi",
+    getMonthly:420000,
+    PaymentMonthly:false,
+    productsImages: "https://picsum.photos/id/15/300/500",
+    quantity:50,
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+
+    },
+
+    {
+    isname:"Nokia 1202",
+    color:"black",
+    price: 1200000,
+    company:"Nokia",
+    getMonthly: 100000,
+    PaymentMonthly: true,
+    productsImages: "https://picsum.photos/id/14/300/500",
+    quantity:1,
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+
+    },
+
+    {
+    isname:"Vivo Y17s",
+    color:"gold",
+    price:4120000,
+    company:"Vivo",
+    getMonthly:602000,
+    PaymentMonthly: true,
+    productsImages: "https://picsum.photos/id/13/300/500",
+    quantity:90,
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+
+    },
+
+    {
+    isname:"Techno Spark Y20",
+    color:"silver",
+    price:3121000,
+    company:"Samsung",
+    getMonthly:323000,
+    PaymentMonthly:true,
+    productsImages: "https://picsum.photos/id/12/300/500",
+    quantity:40,
+    category:"Smartfonlar",
+    description:"Smartfon Xiomi Redmi Note"
+
+    },
 ]
 
 
 const wrapperCard= document.querySelector(".card-wrapper")
 
 const getDate =()=> {
-   /* for(let i = 0; i < products.length; i++){
-     const div = document.createElement("div")
-     div.setAttribute("class","card")
-     div.innerHTML = `<div class="card">
-                <img src="${products[i].productsImages}" alt="${products[i].isname}" class="card-image">
-                <div class="card-body">
-                    <p class="card-category">
-                     ${products[i].category}
-                    </p>
-                    <p class="card-price">
-                        ${products[i].price}
-                    </p>
-                    <span class="card-date rounded-pill">
-                        ${products[i].getMonthly}
-                    </span>
-                    <p class="card-description">
-                        ${products[i].description}
-                    </p>
-
-                    <div class="card-btn">
-                        Xarid qilish
-                    </div>
-                </div>
-            </div>`;
-     */
-
+     wrapperCard.innerHTML = "";
+   
+ 
      products.forEach((products) => {
      const div = document.createElement("div")
      div.setAttribute("class","card")
@@ -161,8 +220,6 @@ const getDate =()=> {
          //so in our case ? means if true, thats mean if inside of products paymentMonthly is true show proudcts.getMonthly + "somdan/oyiga"
          // : means if opposite i mean  if else show Bo'lib to'lash yoq
           
-            
-
         });
 
 
@@ -170,5 +227,21 @@ const getDate =()=> {
     }
 //}
 getDate()
+
+  const increase = document.querySelector('#increase')
+   const decrease = document.querySelector("#decrease")
+   const equal = document.querySelector("#equal")
+   const select = document.querySelector("#categor")
+   
+   select.addEventListener("change",(e)=> {
+    if(e.target.value === "increase") {
+        products.sort((a,b) => a.price - b.price);
+        
+    }else if (e.target.value == "decrease") {
+        products.sort((a,b) => b.price - a.price);
+    }
+    getDate()
+   })
+
 
 

@@ -11,34 +11,22 @@
 </head>
 <body>
 
-    <div class="container">
-         <div class="card-wrapper">
-        <!--<div class="card">
-                <img src="./images/CMi9tIQzqhWOA8u4iBeEdfX1YZEeolImWrImp5fTISUfR8jPxZ0dfmRw8IPL.jpg" alt="" class="card-image">
-                <div class="card-body">
-                    <p class="card-category">
-                     Smartfonlar
-                    </p>
-                    <p class="card-price">
-                        3 121 000 som
-                    </p>
-                    <span class="card-date rounded-pill">
-                        323 000 somdan / oyiga
-                    </span>
-                    <p class="card-description">
-                        Smartfon Xiomi Redmi Note
-                    </p>
-                    <p class="card-description">
-                        11 Pro 128GB 8 GB Grey 
-                    </p>
-                    </p>
-                    <div class="card-btn">
-                        Xarid qilish
-                    </div>
-                </div>
-            </div>
-            -->  
+      
+
+    <div class="container my-3">
+
+        <div class="card select-card w-75  mx-auto m-5">
+         <select id="categor" class="form-select w-auto">
+            <option selected disabled value="equal">Tanlang</option>
+            <option id="increase" value="increase">Kamayish</option>
+            <option id="decrease" value="decrease">O'sish</option>
+         </select>
         </div>
+
+         <div class="card-wrapper">
+      <!--we write all of the codes dynamically i mean in js than we connected it by dom-->
+        </div>
+
     </div>
        
     <script src="script.js"></script>

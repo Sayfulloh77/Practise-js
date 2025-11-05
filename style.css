@@ -32,3 +32,11 @@ img {
     width: 300px;
     height: 400px;
 }
+.select-card {
+  height: 100px;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
