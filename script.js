@@ -192,7 +192,7 @@ const getDate =()=> {
      const div = document.createElement("div")
      div.setAttribute("class","card")
      div.innerHTML = `<div class="card">
-                <i class="bi bi-heart heart-icon  position-absolute top-0 end-0 m-2"></i>
+                <i class="bi bi-heart heart-icon  position-absolute top-0 end-0 m-2 z-1"></i>
                 <img src="${products.productsImages}" alt="${products.isname}" class="card-image">
                 <div class="card-body">
                     <p class="card-category">
