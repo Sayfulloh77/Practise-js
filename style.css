@@ -20,12 +20,32 @@ body {
 .card {
     overflow: hidden;
     cursor: pointer;
-    height: 600px;
+    height: 650px;
     width: 300px;
     position: relative;
 }
 .card:hover {
     box-shadow: 0px 0px 5px 0px silver;
+}
+.card-btn {
+    width: 100px;
+    height: 30px;
+    color: #fff;
+    background: crimson;
+    text-align: center;
+    padding-top: 4px;
+    border-radius: 10px;
+    transition: all ease-out 0.3s;
+    padding-bottom: 25px;
+    border: 2px solid transparent;
+}
+.card-btn:hover {
+    width: 100px;
+    height: 30px;
+    padding-bottom: 25px;
+    color: crimson;
+    background: #fff;
+    border: 2px solid crimson;
 }
 .card-date {
     background-color: crimson;
@@ -80,6 +100,16 @@ header {
     font-weight: 400;
     letter-spacing: 0.2%;
     border-radius: 15px;
+    transition: all ease-out 0.3s;
+    border: 2px solid transparent;
+
+}
+
+.one-side .btn:nth-child(1):hover {
+    background: crimson;
+    border: 2px solid white;
+    color: white;
+
 }
 
 .one-side .btn:nth-child(2) {
@@ -90,7 +120,13 @@ header {
     font-weight: 400;
     letter-spacing: 0.2%;
     border-radius: 15px;
+    transition: all ease-out 0.3s;
 
+}
+.one-side .btn:nth-child(2):hover {
+    background: #fff;
+    color: crimson;
+    border: 1px solid transparent;
 }
 
 .one-side .btn:nth-child(3) {
@@ -100,7 +136,16 @@ header {
     font-weight: 400;
     letter-spacing: 0.2%;
     border-radius: 15px;
+    transition: all ease-out 0.3s;
+    border: 2px solid transparent;
 
+
+}
+
+.one-side .btn:nth-child(3):hover {
+    background: crimson;
+    border: 2px solid white;
+    color: white;
 }
 
 .one-side .btn:nth-child(4) {
@@ -111,6 +156,12 @@ header {
     font-weight: 400;
     letter-spacing: 0.2%;
     border-radius: 15px;
+    transition: all ease-out 0.3s;
+    border: 2px solid transparent;
+
+}
+.one-side .btn:nth-child(4):hover {
+    color: #ffffffb3;
 
 }
 .second-side {
@@ -126,6 +177,10 @@ header {
     font-size: 20px;
     font-weight:bold;
     letter-spacing: 0.2%;
+    cursor: pointer;
+}
+.second-side .number:hover {
+    color: #ffffffb3;
 }
 .second-side .big-btn {
     padding: 8px;
@@ -136,6 +191,11 @@ header {
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 0.2%;
+    transition: all ease-out 0.3s;
+}
+.second-side .big-btn:hover {
+    background: #fff;
+    color: crimson;
 }
 .second-side .box {
     display: flex;
@@ -147,7 +207,6 @@ header {
     border-bottom: none;
     border-left: 1px solid gray;
     border-right: 1px solid gray;
-
 }
 .second-side .til {
     font-weight: 400;
@@ -156,6 +215,7 @@ header {
     margin-top: 10px;
     border-radius: 15px;
     color: #ffffffb3;
+    cursor: pointer;
 } 
 .second-side .til:nth-child(1) {
     color: #fff;
@@ -193,12 +253,22 @@ header {
     display: flex;
     gap: 20px;
     align-items: center;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+}
+.navbar .katalog:hover {
+    color: crimson;
+    border: 2px solid crimson;
 }
 .navbar .katalog p {
     margin-top: 15px;
     font-size: 20px;
     font-weight: 400;
     color: #000;
+    transition: all ease-out 0.3s;
+}
+.navbar .katalog:hover p {
+    color: crimson;
 }
 .navbar .katalog i {
     font-size: 20px;
@@ -235,6 +305,11 @@ header {
     text-align: center;
     margin-top: 20px;
     margin-right: 10px;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+}
+.navbar .savat:hover {
+    color: crimson;
 }
 .navbar .savat p {
     font-weight: 400;
@@ -243,3 +318,32 @@ header {
 .navbar .savat i {
     font-size: 25px;
 }
+.title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+/* shopping icon */
+.shopping-icon {
+    font-size: 1.6rem;
+    color: crimson;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 10px; /* adds small gap */
+}
+
+.shopping-icon:hover {
+    color: darkred;
+    transform: scale(1.15);
+}
+.savat .badge {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+

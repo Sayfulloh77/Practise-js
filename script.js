@@ -205,7 +205,9 @@ const getDate =()=> {
                      ${products.PaymentMonthly ? products.getMonthly+ "so'mdan/oyiga" : "Bo'lib to'lash yo'q" }
 
                     </span> 
-                    <h4>${products.isname}</h4>
+
+                   <h4 class="product-name">${products.isname}</h4>
+
                     <p class="card-description">
                         ${products.description}
                     </p>
@@ -223,20 +225,30 @@ const getDate =()=> {
          }
 
 
-
-
+  
+      
          // ✅ Heart click logic goes here
          const heart = div.querySelector(".heart-icon");
+         const badge = document.querySelector(".badge")
+
 
 heart.addEventListener("click", () => {
+      let count = Number(badge.textContent) // convert to number
+
+
   if (heart.classList.contains("bi-heart")) {
     heart.classList.replace("bi-heart", "bi-heart-fill"); // fill it
     heart.style.color = "crimson";
+     
+    badge.textContent = count + 1;
   } else {
     heart.classList.replace("bi-heart-fill", "bi-heart"); // unfill it
     heart.style.color = "gray";
+    
+    badge.textContent = count - 1;
   }
-});
+  
+  });
      
 
 
@@ -308,3 +320,5 @@ console.log(fruits); // ["apple", "banana", "mango"]
 const num = [123,23,2,45,155]
  num.sort((a,b)=> a - b);
 num.forEach(num=> console.log(num))
+
+
