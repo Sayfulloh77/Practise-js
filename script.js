@@ -9,11 +9,12 @@ const products = [
     price:3121000,
     company:"Samsung",
     getMonthly:323000,
-    PaymentMonthly:true,
+    PaymentMonthly:true ,
     quantity:40,
     productsImages: "https://picsum.photos/id/16/300/500",
     category:"Smartfonlar",
-    description:"Smartfon Xiomi Redmi Note"
+    description:"Smartfon Xiomi Redmi Note",
+   // saved: <i class="bi bi-heart"></i>
     },
     
     {
@@ -27,7 +28,7 @@ const products = [
     quantity:10,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
-
+   // saved: <i class="bi bi-heart"></i>
     },
 
     {
@@ -36,12 +37,13 @@ const products = [
     price:3321000,
     company:"Xiomi",
     getMonthly:420000,
-    PaymentMonthly:false,
+    PaymentMonthly: false,
     productsImages: "https://picsum.photos/id/15/300/500",
-    quantity:50,
+    quantity:33,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
-
+   // saved: <i class="bi bi-heart"></i>
+    
     },
 
     {
@@ -55,7 +57,8 @@ const products = [
     quantity:1,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
-
+   // saved: <i class="bi bi-heart"></i>
+    
     },
 
     {
@@ -69,7 +72,8 @@ const products = [
     quantity:90,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
-
+   // saved: <i class="bi bi-heart"></i>
+    
     },
 
     {
@@ -83,7 +87,8 @@ const products = [
     quantity:40,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
-
+   // saved: <i class="bi bi-heart heart"></i>
+    
     },
       {
     isname:"Samsung A73",
@@ -96,6 +101,8 @@ const products = [
     productsImages: "https://picsum.photos/id/16/300/500",
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
+
     },
     
     {
@@ -104,11 +111,12 @@ const products = [
     price:20000000,
     company:"Apple",
     getMonthly: 3000000,
-    PaymentMonthly:false,
+    PaymentMonthly:true,
     productsImages: "https://picsum.photos/id/17/300/500",
     quantity:10,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
 
     },
 
@@ -123,6 +131,7 @@ const products = [
     quantity:50,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
 
     },
 
@@ -137,6 +146,7 @@ const products = [
     quantity:1,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
 
     },
 
@@ -151,6 +161,7 @@ const products = [
     quantity:90,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
 
     },
 
@@ -160,11 +171,12 @@ const products = [
     price:3121000,
     company:"Samsung",
     getMonthly:323000,
-    PaymentMonthly:true,
+    PaymentMonthly: false,
     productsImages: "https://picsum.photos/id/12/300/500",
     quantity:40,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
+   // saved: <i class="bi bi-heart"></i>
 
     },
 ]
@@ -180,6 +192,7 @@ const getDate =()=> {
      const div = document.createElement("div")
      div.setAttribute("class","card")
      div.innerHTML = `<div class="card">
+                <i class="bi bi-heart heart-icon  position-absolute top-0 end-0 m-2"></i>
                 <img src="${products.productsImages}" alt="${products.isname}" class="card-image">
                 <div class="card-body">
                     <p class="card-category">
@@ -189,7 +202,8 @@ const getDate =()=> {
                         ${products.price} som
                     </p>
                     <span class="card-date rounded-pill">
-                        ${products.getMonthly} <span class="monthly">somdan / oyiga</span>
+                     ${products.PaymentMonthly ? products.getMonthly+ "so'mdan/oyiga" : "Bo'lib to'lash yo'q" }
+
                     </span> 
                     <h4>${products.isname}</h4>
                     <p class="card-description">
@@ -202,9 +216,30 @@ const getDate =()=> {
                 </div>
             </div>`;
      
+
+                // Only add to DOM if quantity > 0
          if(products.quantity !== 0) {
                      wrapperCard.appendChild(div)
          }
+
+
+
+
+         // ✅ Heart click logic goes here
+         const heart = div.querySelector(".heart-icon");
+
+heart.addEventListener("click", () => {
+  if (heart.classList.contains("bi-heart")) {
+    heart.classList.replace("bi-heart", "bi-heart-fill"); // fill it
+    heart.style.color = "crimson";
+  } else {
+    heart.classList.replace("bi-heart-fill", "bi-heart"); // unfill it
+    heart.style.color = "gray";
+  }
+});
+     
+
+
          //const monthly = div.querySelector(".monthly")
          const monthlyNumber = div.querySelector(".card-date")
          /*if (products.PaymentMonthly !== true) {
@@ -228,13 +263,11 @@ const getDate =()=> {
 //}
 getDate()
 
-  const increase = document.querySelector('#increase')
-   const decrease = document.querySelector("#decrease")
-   const equal = document.querySelector("#equal")
+
    const select = document.querySelector("#categor")
    
-   select.addEventListener("change",(e)=> {
-    if(e.target.value === "increase") {
+   select.addEventListener("change",(e)=> { // so we are when user choose increase or reduce "change" will work
+    if(e.target.value === "increase") { // target i our select value i mean if user choose increase that  means target is value increase
         products.sort((a,b) => a.price - b.price);
         
     }else if (e.target.value == "decrease") {
@@ -245,3 +278,33 @@ getDate()
 
 
 
+
+   // example to sort
+   const database = products.sort((a,b)=> {
+    return b.price - a.price
+  })
+    console.log(database)
+
+    //sort is method of array
+   //products.sort((a, b) => a.price - b.price); // O'sish (ascending)
+//products.sort((a, b) => b.price - a.price); // Kamayish (descending)
+
+/*
+// 
+const numbers = [100, 2, 50, 23];
+numbers.sort((a, b) => a - b); // ascending
+console.log(numbers); // [2, 23, 50, 100]
+
+
+
+numbers.sort((a, b) => b - a);
+console.log(numbers); // [100, 50, 23, 2] from top to end
+
+const fruits = ["banana", "apple", "mango"];
+fruits.sort();
+console.log(fruits); // ["apple", "banana", "mango"]
+
+*/
+const num = [123,23,2,45,155]
+ num.sort((a,b)=> a - b);
+num.forEach(num=> console.log(num))
