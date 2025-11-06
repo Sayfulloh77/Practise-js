@@ -223,13 +223,22 @@ const getDate =()=> {
          if(products.quantity !== 0) {
                      wrapperCard.appendChild(div)
          }
+         // card-btn logic goes here
 
-
+         const saved = div.querySelector(".card-btn")
+         const badge = document.querySelector(".badge")
+         const good = document.querySelector(".good")
+          saved.addEventListener("click",()=> {
+             const number = Number(good.textContent)
+            if (saved.classList.contains("card-btn")) {
+               good.textContent = number + 1;
+            }
+          })
   
       
          // ✅ Heart click logic goes here
          const heart = div.querySelector(".heart-icon");
-         const badge = document.querySelector(".badge")
+       //  const badge = document.querySelector(".badge")
 
 
 heart.addEventListener("click", () => {
