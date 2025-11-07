@@ -11,7 +11,7 @@ const products = [
     getMonthly:323000,
     PaymentMonthly:true ,
     quantity:40,
-    productsImages: "https://picsum.photos/id/16/300/500",
+    productsImages: "..//object practise/images/VtpK0dXnNcCSytk30aSvcx4Z2XwpPlc8i8DgI4aMNjrEBS6N6iTqjfV9VeeI.jpg",
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note",
    // saved: <i class="bi bi-heart"></i>
@@ -24,7 +24,7 @@ const products = [
     company:"Apple",
     getMonthly: 3000000,
     PaymentMonthly:false,
-    productsImages: "https://picsum.photos/id/17/300/500",
+    productsImages: "..//object practise/images/VtpK0dXnNcCSytk30aSvcx4Z2XwpPlc8i8DgI4aMNjrEBS6N6iTqjfV9VeeI.jpg",
     quantity:10,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -38,7 +38,7 @@ const products = [
     company:"Xiomi",
     getMonthly:420000,
     PaymentMonthly: false,
-    productsImages: "https://picsum.photos/id/15/300/500",
+    productsImages: "..//object practise/images/iOGaYFVVGomp5tfsIZcCWX3xyzksn7n4tMBwHOEPmAGyWBYn6a4UEM9YkK2w.jpg",
     quantity:33,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -53,12 +53,12 @@ const products = [
     company:"Nokia",
     getMonthly: 100000,
     PaymentMonthly: true,
-    productsImages: "https://picsum.photos/id/14/300/500",
+    productsImages: "..//object practise/images/iOGaYFVVGomp5tfsIZcCWX3xyzksn7n4tMBwHOEPmAGyWBYn6a4UEM9YkK2w.jpg",
     quantity:0,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
    // saved: <i class="bi bi-heart"></i>
-    
+
     },
 
     {
@@ -68,9 +68,9 @@ const products = [
     company:"Vivo",
     getMonthly:602000,
     PaymentMonthly: true,
-    productsImages: "https://picsum.photos/id/13/300/500",
+    productsImages: "..//object practise/images/CMi9tIQzqhWOA8u4iBeEdfX1YZEeolImWrImp5fTISUfR8jPxZ0dfmRw8IPL.jpg",
     quantity:90,
-    category:"Smartfonlar",
+    category:"Smartfonlar    ",
     description:"Smartfon Xiomi Redmi Note"
    // saved: <i class="bi bi-heart"></i>
     
@@ -83,7 +83,7 @@ const products = [
     company:"Samsung",
     getMonthly:323000,
     PaymentMonthly:true,
-    productsImages: "https://picsum.photos/id/12/300/500",
+    productsImages:  "..//object practise/images/CMi9tIQzqhWOA8u4iBeEdfX1YZEeolImWrImp5fTISUfR8jPxZ0dfmRw8IPL.jpg",
     quantity:40,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -98,7 +98,7 @@ const products = [
     getMonthly:323000,
     PaymentMonthly:true,
     quantity:40,
-    productsImages: "https://picsum.photos/id/16/300/500",
+    productsImages: "..//object practise/images/VtpK0dXnNcCSytk30aSvcx4Z2XwpPlc8i8DgI4aMNjrEBS6N6iTqjfV9VeeI.jpg",
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
    // saved: <i class="bi bi-heart"></i>
@@ -112,7 +112,7 @@ const products = [
     company:"Apple",
     getMonthly: 3000000,
     PaymentMonthly:true,
-    productsImages: "https://picsum.photos/id/17/300/500",
+    productsImages: "..//object practise/images/VtpK0dXnNcCSytk30aSvcx4Z2XwpPlc8i8DgI4aMNjrEBS6N6iTqjfV9VeeI.jpg",
     quantity:10,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -127,7 +127,7 @@ const products = [
     company:"Xiomi",
     getMonthly:420000,
     PaymentMonthly:true,
-    productsImages: "https://picsum.photos/id/15/300/500",
+    productsImages: "..//object practise/images/iOGaYFVVGomp5tfsIZcCWX3xyzksn7n4tMBwHOEPmAGyWBYn6a4UEM9YkK2w.jpg",
     quantity:50,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -142,7 +142,8 @@ const products = [
     company:"Nokia",
     getMonthly: 100000,
     PaymentMonthly: false,
-    productsImages: "https://picsum.photos/id/14/300/500",
+   // productsImages: "https://picsum.photos/id/14/300/500",
+    productsImages: "..//object practise/images/iOGaYFVVGomp5tfsIZcCWX3xyzksn7n4tMBwHOEPmAGyWBYn6a4UEM9YkK2w.jpg",
     quantity:1,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -157,7 +158,7 @@ const products = [
     company:"Vivo",
     getMonthly:602000,
     PaymentMonthly: false,
-    productsImages: "https://picsum.photos/id/13/300/500",
+    productsImages: "..//object practise/images/CMi9tIQzqhWOA8u4iBeEdfX1YZEeolImWrImp5fTISUfR8jPxZ0dfmRw8IPL.jpg",
     quantity:90,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -172,7 +173,7 @@ const products = [
     company:"Samsung",
     getMonthly:323000,
     PaymentMonthly: false,
-    productsImages: "https://picsum.photos/id/12/300/500",
+    productsImages:  "..//object practise/images/CMi9tIQzqhWOA8u4iBeEdfX1YZEeolImWrImp5fTISUfR8jPxZ0dfmRw8IPL.jpg",
     quantity:40,
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
@@ -192,7 +193,7 @@ const getDate =()=> {
      const div = document.createElement("div")
      div.setAttribute("class","card")
      div.innerHTML = `<div class="card">
-                <i class="bi bi-heart heart-icon  position-absolute top-0 end-0 m-2 z-1"></i>
+                <i class="bi bi-heart heart-icon  position-absolute top-0 end-0 m-1 z-1"></i>
                 <img src="${products.productsImages}" alt="${products.isname}" class="card-image">
                 <div class="card-body">
                     <p class="card-category">

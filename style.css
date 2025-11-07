@@ -20,7 +20,7 @@ body {
 .card {
     overflow: hidden;
     cursor: pointer;
-    height: 650px;
+    height: 550px;
     width: 300px;
     position: relative;
 }
@@ -53,8 +53,10 @@ body {
     padding: 5px;
 }
 img {
-    width: 300px;
+    width: 100%;
     height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
     z-index: 0;
 }
 .select-card {
@@ -67,7 +69,7 @@ img {
 }
 .heart-icon {
     font-size: 1.5rem;
-    color: #fff;
+    color: gray;
     cursor: pointer;
     transition: all ease-out 0.3s;
     z-index: 1;
