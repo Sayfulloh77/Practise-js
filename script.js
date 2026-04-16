@@ -148,8 +148,7 @@ const products = [
     category:"Smartfonlar",
     description:"Smartfon Xiomi Redmi Note"
    // saved: <i class="bi bi-heart"></i>
-
-    },
+   },
 
     {
     isname:"Vivo Y17s",
@@ -259,10 +258,7 @@ heart.addEventListener("click", () => {
   }
   
   });
-     
-
-
-         //const monthly = div.querySelector(".monthly")
+  //const monthly = div.querySelector(".monthly")
          const monthlyNumber = div.querySelector(".card-date")
          /*if (products.PaymentMonthly !== true) {
                 monthly.textContent = "oyiga tolov yoq"
@@ -330,5 +326,3 @@ console.log(fruits); // ["apple", "banana", "mango"]
 const num = [123,23,2,45,155]
  num.sort((a,b)=> a - b);
 num.forEach(num=> console.log(num))
-
-
